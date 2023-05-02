@@ -1,0 +1,41 @@
+
+function getCartTotalPrice(cart) {
+	let total=0.0;
+	
+	for (item in cart){
+		if (cart[item] != null){
+			total+=cart[item].cout*cart[item].price;
+		}
+}
+	return total;
+}
+
+let cart1 ={
+	'apple':{
+		'cout':2,
+		'price':0.2
+	},
+	'orange':{
+		'cout':1,
+		'price':0.4
+	},
+	'banana':{
+		'cout':7,
+		'price':0.2
+	},
+	null:null
+}
+
+let cart2 ={
+	'apple':{
+		'cout':3,
+		'price':0.2
+	},
+	'orange':{
+		'cout':2,
+		'price':0.4
+	}
+}
+
+console.log(getCartTotalPrice(cart1));
+console.log(getCartTotalPrice(cart2));
